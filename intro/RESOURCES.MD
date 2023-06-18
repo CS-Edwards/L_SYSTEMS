@@ -8,6 +8,7 @@
 
 ### Articles
 [L-System User Notes](http://paulbourke.net/fractals/lsys/) <br>
+[Wiki: L-System User Notes](https://en.wikipedia.org/wiki/L-system) <br>
 
 
 
