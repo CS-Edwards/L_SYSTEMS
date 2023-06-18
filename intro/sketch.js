@@ -49,6 +49,8 @@ function setup(){
     drawRules ={
         //draw forward
         "F": ()=>{
+            //color leaves brown
+            stroke(150,100,0);
             //-len means draw up
             line(0,0,0,-len);
             //move to end of drawn line
@@ -65,8 +67,14 @@ function setup(){
         },
         //push information into save state
         "[": push,
-        //pop
-        "]": pop,
+        // meas we've reached the end of the branch
+        "]": ()=>{
+            //noStroke();
+            fill(0,255,0);
+            //leaf shape
+            ellipse(0,0,2,5);
+            pop();
+        }
     }
 }
 
@@ -74,12 +82,12 @@ function draw(){
     //set background color of the canvas
 
     //set white and override style.css
-    //background(255);
+    background(255);
 
     //OPTIONAL:
     //since background is set in style, provides and incremental greening gradient
     //provides cumulative effect can see previous iteration of plant 
-    background('rgba(0,255,0, 0.25)');
+    //('rgba(0,255,0, 0.25)');
     //web reader description
     describe('canvas with soft green background');
 
